@@ -1,0 +1,12 @@
+from data import info
+
+TRAIN_LENGTH = info.splits['train'].num_examples
+BATCH_SIZE = 64
+BUFFER_SIZE = 1000
+STEPS_PER_EPOCH = TRAIN_LENGTH // BATCH_SIZE
+
+OUTPUT_CHANNELS = 3
+
+EPOCHS = 1000
+VAL_SUBSPLITS = 5
+VALIDATION_STEPS = info.splits['test'].num_examples//BATCH_SIZE//VAL_SUBSPLITS
